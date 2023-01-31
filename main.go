@@ -2,19 +2,12 @@ package main
 
 import (
 	"fmt"
-	"io"
+	"os"
+	"strings"
 )
 
 func main() {
-	var ans int = 0
-	for {
-		var str string
-		_, err := fmt.Scanf("%s", &str)
-		if err != io.EOF {
-			ans++
-		} else {
-			break
-		}
-	}
-	fmt.Println(ans)
+	phrase := os.Args[1]
+	words := strings.Fields(phrase)
+	fmt.Println(len(words))
 }
