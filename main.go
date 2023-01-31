@@ -8,8 +8,8 @@ import (
 func main() {
 	var ans int = 0
 	for {
-		var str int
-		_, err := fmt.Scanf("%s\n", &str)
+		var str string
+		_, err := fmt.Scanf("%s", &str)
 		if err != io.EOF {
 			ans++
 		} else {
